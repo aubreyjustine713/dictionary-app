@@ -13,8 +13,22 @@ export default function App() {
           <Dictionary />
         </main>
         <footer className="app-footer">
-          This site was coded with 🖤 by Aubrey Jamison.
-          {/*  Add Github link and linkedin profile */}
+          This site was coded with 🖤 by{" "}
+          <a
+            href="https://www.linkedin.com/in/aubreyjamison713/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Aubrey Jamison
+          </a>{" "}
+          and is{" "}
+          <a
+            href="https://github.com/aubreyjustine713/dictionary-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            open sourced on GitHub.
+          </a>
         </footer>
       </div>
     </div>
