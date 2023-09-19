@@ -1,0 +1,9 @@
+.Synonyms {
+  margin: 0px;
+  padding: 0px;
+}
+.Synonyms li {
+  color: rgb(181, 190, 125);
+  display: inline-block;
+  padding-right: 15px;
+}

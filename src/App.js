@@ -8,7 +8,7 @@ export default function App() {
       <div className="container">
         <header className="app-header">
           <img src={logo} className="app-logo" alt="logo" />
-          <h1>Dictionary App</h1>
+          <h1>What word would you like to look up?</h1>
         </header>
         <main>
           <Dictionary defaultKeyword="woodland" />
