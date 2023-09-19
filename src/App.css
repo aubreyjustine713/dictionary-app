@@ -1,7 +1,19 @@
+body {
+  background-color: darkolivegreen;
+  color: blanchedalmond;
+}
+a {
+  text-decoration: none;
+  color: rgb(181, 190, 125);
+}
+h1 {
+  text-align: center;
+  font-size: calc(1.325rem + 0.9vw);
+}
 .app .app-logo {
   display: block;
   max-width: 200px;
-  margin: 70px auto;
+  margin: 60px auto;
 }
 .app .app-footer {
   text-align: center;

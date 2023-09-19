@@ -1,4 +1,4 @@
-import logo from "./aubrey-justine.png";
+import logo from "./aubrey-justine.svg";
 import "./App.css";
 import Dictionary from "./Dictionary";
 
@@ -8,12 +8,13 @@ export default function App() {
       <div className="container">
         <header className="app-header">
           <img src={logo} className="app-logo" alt="logo" />
+          <h1>Dictionary App</h1>
         </header>
         <main>
           <Dictionary />
         </main>
         <footer className="app-footer">
-          This site was coded with 🖤 by{" "}
+          This site was coded with 🤍 by{" "}
           <a
             href="https://www.linkedin.com/in/aubreyjamison713/"
             target="_blank"
