@@ -1,4 +1,13 @@
 form {
   text-align: center;
-  margin-bottom: 15px;
+  padding: 10px;
+}
+form input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
+.hint {
+  text-align: center;
+  font-size: 12px;
 }
