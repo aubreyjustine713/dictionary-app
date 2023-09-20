@@ -10,11 +10,11 @@ export default function Meaning(props) {
         if (index < 5) {
           return (
             <div key={index}>
-              <p>
+              <div className="definition">
                 {definition.definition}
                 <br />
                 <div className="example">{definition.example}</div>
-              </p>
+              </div>
             </div>
           );
         } else {

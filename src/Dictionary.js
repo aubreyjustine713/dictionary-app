@@ -2,18 +2,26 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
 import Results from "./Results";
+import Photos from "./Photos";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     setResults(response.data[0]);
+  }
+  function handleSheCodesResponse(response) {
+    setPhotos(response.data.photos);
   }
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+    let sheCodesApiKey = "9t00ecb4eo3189a04cbb6f6f58a37ac9";
+    let sheCodesApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${sheCodesApiKey}`;
+    axios.get(sheCodesApiUrl).then(handleSheCodesResponse);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -40,6 +48,7 @@ export default function Dictionary(props) {
           suggested words: sunset, wine, yoga, forest...
         </div>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
